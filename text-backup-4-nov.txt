@@ -1,0 +1,48 @@
+Clustering in Asset Management: an Elegant Way to Visualize Client Behaviors
+Intro
+Asset management consists in managing the wealth of clients. Hence, understanding clients' behavior is crucial. It is common in private banks to look for patterns within clients. The clustering task tries to answer the questions: can we identify what are the main client behaviors? Is it possible to group them by similarities? In this article I will briefly present what is clustering and most of all, show an original way to display the results. Below is an insight of the final results.
+Interactive cluster visualizationExample
+As in any theory, one example makes it much easier to understand. Say we have a bank with 10 clients. We want to focus on the main characteristics of clients. In this example we consider only 4 aspects. As you can imagine , this is very simplified:
+Wealth - also called "asset under management" (AUM)
+Number of unique financial instruments
+Number of transactions
+Age
+
+Clustering
+Clustering is about grouping clients based on similar characteristics. There are numerous ways of performing such tasks and discussing those different methods is not in the scope of this article. Let's use the most common clustering method, K-Means. In a nutshell, this method allows to minimize the variance of each cluster. In other words, we make sure the clusters are compact enough.
+Pictures clusters good/bad
+Optimization
+The tricky part of any clustering method is the optimization. Optimization is not the main topic of this article but I need to dig in few notions so that the rest will be clear. Optimization is the step that answers the following question: How to make sure the method correctly identifies the clients' behavior? As in any model, there are some parameters that need to be properly chosen. 
+The silhouette coefficient is the ratio of the distance intra/inter clusters. It measures how compact is the cluster. 
+Where:
+ a(i) = average distance of client i with the other points from the same cluster.
+b(i) = smallest average distance of i with the other points from the closest cluster.
+The below picture helps to understand better what those distances mean exactly.
+Silhouette coefficient examplesVisualization
+Now that we think our clusters are well defined, how do we visualize the results? More specifically, how to communicate our results to the rest of our colleagues in a meaningful way?
+When researching on the topic on how to best perform cluster visualization, I came across many methods that involves dimension reductions. In short, it consists in transforming our problem to a 2D case. That way we could display results that humans are capable of reading graphically. The problem with this transformation is that we loose part of the information contained in the data.
+One way to overcome this problem is to display only the density. After all, when running clustering the key questions are:
+How precise is the detected pattern?
+How good a client "fit" into a specific cluster?
+
+We will build a solution based on the silhouette coefficient described above. 
+Step 1: define centers for each cluster
+First, we define the center coordinates for each cluster. We want to make sure each cluster is distinct so that it's readable enough. Here I use 
+Step 2: compute the silhouette coefficient for each sample
+Then we need to compute the silhouette coefficient for each sample.
+Step 3: compute the silhouette coefficient for each cluster
+We compute the silhouette coefficient for each cluster using the average.
+Step 4: generate coordinates for each cluster
+We generate coordinates for each cluster. It may sounds silly but bear with me until the last step. Each cluster will be generate with a normal distribution where the center will be the center of the cluster and the standard deviation the quality of the cluster.
+Step 5: map each point to the right generated point
+Finally, we plot the data so that the distance to the cluster center is proportional to the cluster quality.
+Implementation
+For the implementation I use my favorite graphical library: Plotly. It's well maintained and highly customizable package that I highly recommend to use.
+Improvements
+As you have seen the distance between each cluster doesn't have any interpretation. One improvement would be to weight the inter cluster distance with the actual distance between the different cluster centers.
+Conclusion
+
+Reference
+Plotly library
+Clustering K-Means
+Silhouette coefficient
