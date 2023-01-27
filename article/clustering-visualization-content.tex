@@ -1,9 +1,9 @@
-{\fontsize{25pt}{40pt} \textbf{Clustering in Asset Management:}\par}
+{\fontsize{25pt}{40pt} \textbf{Clustering in Wealth Management:}\par}
 {\fontsize{25pt}{40pt} \textbf{an Original Way to Visualize Client Behaviors}\par}
 
 \section{Intro}
 
-Asset management consists in managing investments on behalf of others. To provide the best service, it's crucial for asset managers to understand clients' behaviors. That's why it's common in private banks to look for patterns within clients' data. Clustering is a common method to achieve this. However, one of the key challenge with such approach is to display and interpret the results. In this article I will briefly give an introduction to clustering and most of all, show a simple and original way to display the results. Below is an insight of the final results.
+Wealth management consists in managing investments on behalf of others. To provide the best service, it's crucial for wealth managers to understand clients' behaviors. That's why it's common in private banks to look for patterns within clients' data. Clustering is a common method to achieve this. However, one of the key challenge with such approach is to display and interpret the results. In this article I will briefly give an introduction to clustering and most of all, show a simple and original way to display the results. Below is an insight of the final results.
 
 \begin{center}
 \includegraphics[scale=0.5]{./../img/clusters-static.png}
@@ -32,7 +32,7 @@ $$s(i) = \frac{b(i)-a(i)}{max(a(i),b(i))}$$
 
 Where: \\
 $a(i)$ = average distance of client i with the other points from the same cluster. \\
-$b(i)$ = smallest average distance of i with the other points from the closest cluster. \\
+$b(i)$ = average distance of i with the other points from the closest cluster. \\
 
 The below picture helps to understand better what those distances mean exactly. 
 
@@ -48,7 +48,7 @@ The higher the silhouette coefficient, the better is the cluster quality. We can
 \section{Visualization}
 
 Now that our clusters are well defined, how do we visualize the results? More specifically, how to communicate our results to the rest of our colleagues in a meaningful way?
-When researching on the topic on how to best perform cluster visualization, I came across many methods that involve \href{https://en.wikipedia.org/wiki/Dimensionality_reduction}{dimension reduction}. In short, it consists in transforming our problem to a 2D case. That way we could display results that humans are capable of reading graphically. The problem with this transformation is that \textbf{we lose part of the information} contained in the data.
+When researching on the topic on how to best perform cluster visualization, I came across many methods that involve \href{https://en.wikipedia.org/wiki/Dimensionality_reduction}{dimension reduction}. In short, it consists in transforming our problem to a 2D case. That way we could display results that humans are capable of reading graphically. The problem with this transformation is that we \textbf{lose important aspects of the data (variability)}.
 One way to overcome this problem is to display only the density. After all, when performing a clustering task the key questions are:
 
 - How precise are the detected patterns? \\
@@ -87,19 +87,21 @@ We compute the distance of each generated point to the center of the cluster. A 
 
 Finally, we sort the data based on their distance to the center. We map observations so that, for each observation, the distance to the cluster center is proportional to silhouette coefficient. That way, we penalize observations that seem to fit poorly to the cluster they belong to (based on the silhouette coefficient).
 
-\section{Implementation}
+\section{Results}
 
-For the implementation I use my favorite graphical library: \href{https://plotly.com/}{Plotly}. It's well maintained and highly customizable package that I highly recommend. From this figure, we can see that three clients from the red cluster seem to have very close behaviors since the dots are very close to each other. 
+From the below figure, we can see that two clients are more distant from their cluster centers. This means that their profile is not fitting as good as other peers from the same cluster. Indeed, the first client on the left (green) has a much lower wealth than others. However, his trading behavior makes him a good candidate for this cluster. Similarly, the client on the right (blue) has a slightly larger number of trades than others from the same cluster. The full data can be found in this notebook [LINK TO BE ADDED].
 
 \begin{center}
-\includegraphics[scale=0.5]{./../img/clusters-static-distance.png}
+\includegraphics[scale=0.5]{./../img/clusters-static-arrow.png}
 \end{center}
 
-On the contrary, the fourth client of the red cluster fits less good in the cluster. Indeed, the client is the only one in the cluster with a large number of trades.
+\textit{Note}: from this figure, we can draw conclusions only from the dots and their respective cluster centers. The distances between dots other than the center is not relevant, as well as the distances between clusters. This could represent a potential development of the method. \\
+
+\textit{Note (2)}: the graphical library that I use is \href{https://plotly.com/}{Plotly}. It's a well maintained and highly customizable package that I highly recommend.
 
 \section{Conclusion}
 
-In this article, I have presented a method to display cluster results without reducing dimensions. The method focuses on density since it's the most important information anyone would look at. Using such method, asset managers can quickly see whether there are large/small groups of clients behaving similarly as well as identifying clients with clearest patterns.
+In this article, I have presented a method to display cluster results focusing on the density. Using such method, wealth managers can quickly see whether there are large/small groups of clients behaving similarly, identify clients with strong profiles as well as potential outliers.
 
 \section{References}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.26)  3 JAN 2023 18:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.26)  27 JAN 2023 16:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -802,11 +802,11 @@ Package biblatex Info: Reference segment=0 on input line 107.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 (./clustering-visualization-content.tex
-<./../img/clusters-static.png, id=36, 339.2675pt x 229.85875pt>
+<./../img/clusters-static.png, id=36, 684.5575pt x 288.07625pt>
 File: ./../img/clusters-static.png Graphic file (type png)
 <use ./../img/clusters-static.png>
 Package pdftex.def Info: ./../img/clusters-static.png  used on input line 9.
-(pdftex.def)             Requested size: 169.63333pt x 114.92908pt.
+(pdftex.def)             Requested size: 342.27791pt x 144.03777pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
@@ -848,7 +848,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
-
+[2 <./../img/silhouette-explanations.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 54--56
 
  []
@@ -858,7 +858,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-[2 <./../img/silhouette-explanations.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
@@ -889,7 +889,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
-
+[3 <./../img/10-clusters-angle-3.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
@@ -899,31 +899,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
 
-[3 <./../img/10-clusters-angle-3.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
-<./../img/clusters-static-distance.png, id=71, 596.2275pt x 255.95625pt>
-File: ./../img/clusters-static-distance.png Graphic file (type png)
-<use ./../img/clusters-static-distance.png>
-Package pdftex.def Info: ./../img/clusters-static-distance.png  used on input l
-ine 95.
-(pdftex.def)             Requested size: 298.11302pt x 127.9778pt.
+<./../img/clusters-static-arrow.png, id=70, 677.53125pt x 330.23375pt>
+File: ./../img/clusters-static-arrow.png Graphic file (type png)
+<use ./../img/clusters-static-arrow.png>
+Package pdftex.def Info: ./../img/clusters-static-arrow.png  used on input line
+ 95.
+(pdftex.def)             Requested size: 338.76479pt x 165.11646pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
 
  []
 
-
-Overfull \hbox (145.35168pt too wide) in paragraph at lines 108--109
-[]\T1/cmr/m/n/10.95 Clustering GMM (2) - the fol-low-ing blog gives quite a goo
-d ex-pla-na-tion of the con-cept: https://jaketae.github.io/study/gaussian-
- []
-
-
+[4 <./../img/clusters-static-arrow.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
+ []
+
+
+Overfull \hbox (145.35168pt too wide) in paragraph at lines 110--111
+[]\T1/cmr/m/n/10.95 Clustering GMM (2) - the fol-low-ing blog gives quite a goo
+d ex-pla-na-tion of the con-cept: https://jaketae.github.io/study/gaussian-
  []
 
 
@@ -931,23 +931,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
  []
 
-[4 <./../img/clusters-static-distance.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 112--113
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
 
 ) [5] (./clustering-visualization.aux)
 Package rerunfilecheck Info: File `clustering-visualization.out' has not change
 d.
-(rerunfilecheck)             Checksum: 8CDFEC0B1C5EB79CEFA62EE3311FAEC4;739.
+(rerunfilecheck)             Checksum: 5A363EEAB394C6A115C31BC965AF8040;704.
 Package logreq Info: Writing requests to 'clustering-visualization.run.xml'.
 \openout1 = `clustering-visualization.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
  20715 strings out of 478994
- 342711 string characters out of 5858183
- 1159816 words of memory out of 5000000
+ 342693 string characters out of 5858183
+ 1160816 words of memory out of 5000000
  37913 multiletter control sequences out of 15000+600000
  415406 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -962,7 +967,7 @@ cal/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/loca
 l/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/
 texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/te
 xlive/2021/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on clustering-visualization.pdf (5 pages, 758139 bytes).
+Output written on clustering-visualization.pdf (5 pages, 938298 bytes).
 PDF statistics:
  117 PDF objects out of 1000 (max. 8388607)
  92 compressed objects within 1 object stream
