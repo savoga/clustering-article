@@ -1,2 +1,0 @@
-- use more data to make it more visual
-- explain when to use silhouette coefficient cluster VS sample
