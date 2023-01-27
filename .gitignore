@@ -1,10 +1,10 @@
 \__pycache__
 .DS_Store
 DoNotPush/
-.aux
-.bcf
-.out
-.log
-.xml
-.gz
+*.aux
+*.bcf
+*.out
+*.log
+*.xml
+*.gz
 .ipynb_checkpoints/
